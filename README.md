@@ -46,7 +46,3 @@ Below is a preview of the site:
 
 - **public/**: Contains static assets like images.
 - **src/**: Contains source code including components and styles.
-
-## License
-
-This project is licensed under the MIT License.
