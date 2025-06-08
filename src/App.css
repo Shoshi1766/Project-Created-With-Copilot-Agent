@@ -50,6 +50,7 @@ body {
   /* Pink background */
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .app {
@@ -84,7 +85,6 @@ body {
 }
 
 
-/* Updated styles to place the TodoList and Calculator components next to each other */
 .todo-calculator-section {
   display: flex;
   justify-content: center;
@@ -222,4 +222,20 @@ button:hover {
 
 .task-item button:last-child:hover {
   background: linear-gradient(135deg, #ff758c, #ff9a9e);
+}
+
+.components-row {
+  background-color: pink;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+.components-row>div {
+  flex: 1;
+  margin: 0 10px;
+  box-sizing: border-box;
 }

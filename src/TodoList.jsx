@@ -37,15 +37,21 @@ function TodoList() {
   return (
     <div>
       <h1>To-Do List</h1>
-      <div className="input-container">
+      <div className="input-container" style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '100%' }}>
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder={editIndex !== null ? "Update task..." : "Add a new task..."}
+          style={{ flex: '1', padding: '5px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '0.8rem' }}
         />
-        <button onClick={addOrUpdateTask}>{editIndex !== null ? "Update" : "Add"}</button>
+        <button
+          onClick={addOrUpdateTask}
+          style={{ padding: '10px 15px', borderRadius: '5px', backgroundColor: '#007bff', color: '#fff', border: 'none', cursor: 'pointer' }}
+        >
+          {editIndex !== null ? "Update" : "Add"}
+        </button>
       </div>
       <ul className="task-list">
         {tasks.map((task, index) => (
